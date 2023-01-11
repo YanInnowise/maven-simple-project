@@ -72,13 +72,13 @@
     <repository>
         <id>releases</id>
         <name>Releases</name>
-        <url>http://localHost:8080/repository/YourRepo/</url>
+        <url>http://localHost:8081/repository/maven-central-repository/</url>
     </repository>
 
     <snapshotRepository>
         <id>snapshots</id>
         <name>Snapshots</name>
-        <url>http://localHost:8080/repository/YourRepo/</url>
+        <url>http://localHost:8081/repository/maven-central-repository/</url>
     </snapshotRepository>
 </distributionManagement>
  
