@@ -65,9 +65,7 @@
         </executions>
       </plugin>
     </plugins>
-  </build>
-</project>
-<distributionManagement>
+    <distributionManagement>
 
     <repository>
         <id>releases</id>
@@ -82,3 +80,6 @@
     </snapshotRepository>
 </distributionManagement>
  
+  </build>
+</project>
+
