@@ -15,6 +15,20 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>http://localhost:8081//</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>daily</updatePolicy>
+        </snapshots>
+        <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+        </releases>
+    </pluginRepository>
+</pluginRepositories>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -64,22 +78,7 @@
           </execution>
         </executions>
       </plugin>
-    </plugins>
-    <distributionManagement>
-
-    <repository>
-        <id>releases</id>
-        <name>Releases</name>
-        <url>http://localHost:8081/repository/maven-central-repository/</url>
-    </repository>
-
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>Snapshots</name>
-        <url>http://localHost:8081/repository/maven-central-repository/</url>
-    </snapshotRepository>
-</distributionManagement>
- 
+    </plugins> 
   </build>
 </project>
 
