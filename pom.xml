@@ -15,22 +15,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
-  <pluginRepositories>
-    <pluginRepository>
-        <id>central</id>
-        <url>http://localhost:8081/#admin/repository/repositories:maven-central-repository/</url>
-        <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>daily</updatePolicy>
-        </snapshots>
-        <releases>
-            <enabled>true</enabled>
-            <updatePolicy>never</updatePolicy>
-        </releases>
-    </pluginRepository>
-</pluginRepositories>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -85,7 +69,7 @@
    <repositories>
     <repository>
       <id>maven-group</id>
-      <url>http://your-host:8081/repository/maven-group/</url>
+      <url>http://localhost:8081/repository/my-maven-group/</url>
     </repository>
   </repositories>
 </project>
