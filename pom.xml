@@ -15,10 +15,11 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
   <pluginRepositories>
     <pluginRepository>
         <id>central</id>
-        <url>http://localhost:8081//</url>
+        <url>http://localhost:8081/#admin/repository/repositories:maven-central-repository/</url>
         <snapshots>
             <enabled>true</enabled>
             <updatePolicy>daily</updatePolicy>
@@ -29,6 +30,7 @@
         </releases>
     </pluginRepository>
 </pluginRepositories>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
