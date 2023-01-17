@@ -16,14 +16,14 @@ Go to jenkins thw you went to nexus, with only different- port (:8080)
 Install suggested pluggins then go to Manage jenkins/Manage pluggins and instal pluggins from the list below
 Crate 3 jobs (Freestyle job, Maven project, Pipeline), in Global tool configuration set JDK and Maven settings (install automatically [last version])
 
-### 1 Job
+### Job-1
 + Type: Maven project
 + Name:jenkins-maven-build
 + General: Restrict where this project can be run (label:build)
 + Source Code Management: Git (project repo)
 + Build: Root POM (pom.xml)
 
-### 2 Job
+### Job-2
 + Type: Freestyle job
 + Name:jenkins-maven-deploy
 + General: Restrict where this project can be run (label:build)
@@ -35,7 +35,7 @@ Crate 3 jobs (Freestyle job, Maven project, Pipeline), in Global tool configurat
     - Artifact to copy (*.jar)
              * Nexus artifact uploader
              
-### 3 Job
+### Job-3
 + Type: Pipeline
 + Name:jenkins-maven-test
 + Build-triggers:Build after other projects are built (jenkin-maven-deploy)
