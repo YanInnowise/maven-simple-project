@@ -54,7 +54,7 @@ Use Jenkinsfile
 10. Pipeline Utility Steps
 11. Role-based Authorization Strategy 
 
-## Jenkins slaves on GCP
+## Step 4 - Jenkins slaves on GCP
 
 Go to GCP console and create 2 instances e2-micro 1Gb, allow HTTP and HTTPS, network tag - default-allow-icmp,connect to them using ssh.
 On each of them:
@@ -80,7 +80,7 @@ Launch method - Launch via SSH
     Credentials - use SSH private key frome instance-1, user: jenkins, (advice:fill the ID and description)
     Host Key Verification Strategy - Manually tusted
 
-## Configure nginx
+## Step 5 - Configure nginx
 Create nginx.conf file and configure as reverse proxy
 On /etc/hosts file you need to add domain name to jenkins ip:port
 
