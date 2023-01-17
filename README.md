@@ -63,6 +63,7 @@ Install Java, set $JAVA_HOME
 Generate ssh-key
 
 Go to Jenkinsand create 2 Nodes, Slave1(build) and Slave2(test)
+
 ### Slave1 
 Remote root directory -/home/jenkins/
 Labels - build
@@ -70,6 +71,7 @@ Launch method - Launch via SSH
     Host -*GCP 1-instance external ip*
     Credentials - use SSH private key frome instance-1, user: jenkins, (advice:fill the ID and description)
     Host Key Verification Strategy - Manually tusted
+
 ### Slave2
 Remote root directory - /home/jenkins/
 Labels - build
@@ -77,6 +79,11 @@ Launch method - Launch via SSH
     Host -*GCP 2-instance external ip*
     Credentials - use SSH private key frome instance-1, user: jenkins, (advice:fill the ID and description)
     Host Key Verification Strategy - Manually tusted
+
+## Configure nginx
+Create nginx.conf file and configure as reverse proxy
+On /etc/hosts file you need to add domain name to jenkins ip:port
+
 ## Run
 Run build jenkins-maven-build< check nexus repo - here you have to see nexus mrtadata with artifacts
 (artifats name need to be like *verstion*-*date*time*)
