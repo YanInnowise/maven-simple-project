@@ -1,0 +1,44 @@
+version: '3.3'
+
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    volumes:
+      - ./nginx/jenkins.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+    links:
+     - jenkins
+    networks:
+         jenkins:
+          
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    restart: always
+    ports:
+      - 8080:8080
+      - 50000:50000
+    container_name: jenkins
+    networks:
+         jenkins:
+            ipv4_address: 172.19.0.2
+            
+  nexus3:
+    image: sonatype/nexus3
+    volumes:
+    - ./nexus-data:/nexus-data
+    ports:
+    - 8081:8081
+    networks:
+         jenkins:
+            ipv4_address: 172.19.0.3
+
+networks:
+  jenkins:
+    driver: bridge
+    ipam:
+     driver: default
+     config:
+       - subnet: 172.19.0.0/24
