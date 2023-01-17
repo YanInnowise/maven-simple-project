@@ -81,7 +81,7 @@ Launch method - Launch via SSH
     Host Key Verification Strategy - Manually tusted
 
 ## Step 5 - Configure nginx
-Create nginx.conf file and configure as reverse proxy
+Create nginx.conf and jenkins.conf file and configure thme as reverse proxy
 On /etc/hosts file you need to add domain name to jenkins ip:port
 
 ## Run
